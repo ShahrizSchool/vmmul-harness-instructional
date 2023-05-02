@@ -29,6 +29,7 @@ void my_dgemv(int n, double* A, double* x, double* y) {
    #pragma omp parallel for 
    for(int i = 0; i < n; i++){
       for (int j = 0; j < n; j++){
+         #pragma omp critical
          sum = y[i] + A[i * n + j] * x[j];
       }
    }
