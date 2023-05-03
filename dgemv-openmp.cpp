@@ -29,7 +29,7 @@ void my_dgemv(int n, double* A, double* x, double* y) {
    for(int i = 0; i < n; i++){
       #pragma omp atomic 
       y[i] += A[i * n] * x[0];
-      for(int j = 0; j< n; j++){
+      for(int j = 1; j< n; j++){
          #pragma omp atomic
          y[i] += A[i * n + j] * x[j];
       }
