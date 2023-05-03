@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/global/homes/s/shahrizm/vmmul-harness-instructional/dgemv-openmp.cpp
+string.h
+-
+stdlib.h
+-
+stdio.h
+-
+omp.h
+-
+

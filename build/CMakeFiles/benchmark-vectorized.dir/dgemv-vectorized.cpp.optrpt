@@ -1,0 +1,38 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+
+Begin optimization report for: my_dgemv(int, double *, double *, double *)
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at /global/homes/s/shahrizm/vmmul-harness-instructional/dgemv-vectorized.cpp(11,4)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at /global/homes/s/shahrizm/vmmul-harness-instructional/dgemv-vectorized.cpp(12,7)
+   <Peeled loop for vectorization, Multiversioned v1>
+      remark #15301: PEEL LOOP WAS VECTORIZED
+   LOOP END
+
+   LOOP BEGIN at /global/homes/s/shahrizm/vmmul-harness-instructional/dgemv-vectorized.cpp(12,7)
+   <Multiversioned v1>
+      remark #15300: LOOP WAS VECTORIZED
+   LOOP END
+
+   LOOP BEGIN at /global/homes/s/shahrizm/vmmul-harness-instructional/dgemv-vectorized.cpp(12,7)
+   <Remainder loop for vectorization, Multiversioned v1>
+      remark #15301: REMAINDER LOOP WAS VECTORIZED
+   LOOP END
+
+   LOOP BEGIN at /global/homes/s/shahrizm/vmmul-harness-instructional/dgemv-vectorized.cpp(12,7)
+   <Multiversioned v2>
+      remark #15304: loop was not vectorized: non-vectorizable loop instance from multiversioning
+   LOOP END
+
+   LOOP BEGIN at /global/homes/s/shahrizm/vmmul-harness-instructional/dgemv-vectorized.cpp(12,7)
+   <Remainder, Multiversioned v2>
+   LOOP END
+LOOP END
+===========================================================================
